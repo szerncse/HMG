@@ -1,0 +1,400 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; font-family:'s';}
+ul{list-style: none;}
+a{text-decoration: none; color: #fff;}
+/* 메인사이드시작---- */
+.main-slide{
+    width: 100%;
+    height: 740px;
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+}
+.main-slide >ul > li{
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.main-slide >ul > li:nth-child(1){
+    opacity: 1;
+}
+.main-slide ul li img{width: 100%; height: 100%;}
+.main-slide .indicator{
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    left: 0;
+    bottom: 50px;
+    width: 308px;
+    height: 48px;
+    z-index: 2;
+}
+.main-slide .indicator .btn{margin-right: 17px; width: 53px; height: 53px;}
+.main-slide .indicator .btn img{width: 100%; display: none; cursor: pointer;}
+.main-slide .indicator .btn img:nth-child(1){display: block;}
+
+.main-slide .indicator ul{display: flex;}
+.main-slide .indicator ul li{width: 30px; height: 30px; cursor: pointer;}
+.main-slide .indicator ul li a{font-size: 0; width: 10px; height: 10px;  border-radius: 50%; border: 2px solid rgba(255,255,255,0.5); display: inline-block; box-sizing: border-box;}
+.main-slide .indicator ul li.on a{background-color: #fff;}
+.main-slide .main-txt{
+    position: relative;
+    margin: 0 auto;
+    width: 1440px;
+    height: 100%;
+}
+.main-slide .main-txt .txt-content-wrap{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-slide .main-txt .txt-content-wrap.on{
+    display: block;
+}
+.main-slide .main-txt .txt-content p{
+    font-size: 64px;
+    color: #fff;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+    line-height: 84px;
+    letter-spacing: -.025em;
+}
+.main-slide .main-txt .txt-content p span{
+    position: relative;
+    top: 80px;
+    transition: 0.6s;
+    opacity: 0;
+}
+.main-slide .main-txt .txt-content p:nth-child(2) span{
+    transition-delay: 0.3s;
+}
+.main-slide .main-txt .txt-content p:nth-child(3) span{
+    transition-delay: 0.6s;
+}
+.main-slide .main-txt .txt-content.on p span{
+    opacity: 1;
+    top: 0;
+}
+.main-slide .main-txt .txt-content a{
+    position: relative;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    margin-top: 27px;
+    display: inline-block;
+    opacity: 0;
+    transition: 0.6s 0.6s;
+}
+.main-slide .main-txt .txt-content.on a{
+    opacity: 1;
+}
+/* 메인사이드끝---- */
+/* 메뉴시작 --------*/
+.nav{position: absolute; width: 100%;top: 0; z-index: 99; position: absolute; }
+.nav .nav-wrap{max-width: 1440px;margin: 0 auto; display: flex;}
+.nav .nav-wrap >ul{width: 55%;margin: 0 auto; padding: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 18px; 
+    font-weight: bold; }
+.nav .nav-wrap > ul > li > a{color:#fff;}
+
+.nav .login > ul{ display: flex; align-items: center;}
+.nav .nav-wrap .login > ul > a{width: 100%; margin: 18px 15px; display: flex; font-size: 14px; font-weight: bold;  justify-content: flex-start;}
+.nav .nav-wrap .login > ul > li:last-child > a{
+     width: 145px; padding: 16px 0; text-align: center; margin-left: 20px; 
+     font-size: 16px; color: #fff; display: inline-block;
+border-radius: 45px; background: linear-gradient(120deg, #ff8933, #ea2e2e, #fff, #fff);  background-size: 400%; transition: 1s; background-position: 90% 90%; 
+}
+.nav .nav-wrap .login > ul > li:last-child:hover a{background-position: 0 0; color: #000;}
+/* 예약하기 시작 */
+.tab{width: 100%;}
+.tab ul{position: relative; border: 1px solid #ffffff; border-radius: 16px; background-color: #fff;
+padding: 20px 30px; font-size: 16px; top: 8px;
+font-weight: bold;
+display: inline-block;}
+.tab ul li{line-height: 2;}
+.tab ul li a{position: relative; color:#929292;}
+.tab ul li:hover a{ color: #000000; transition: 0.2s;}
+
+.tab ul li a::after{position: absolute;
+    content: "";
+    width: 0px; height: 2px; background-color: #e91515;
+    left: 0px;transition: 0.2s; bottom: 0;}
+.tab ul li a:hover::after{width: 100%; }
+
+
+
+
+
+
+
+
+/* 예약하기 끝 */
+/* 메뉴 안 시작 display: none; */
+.nav .submenu{flex-basis: 60%;}
+
+
+
+
+
+
+
+
+
+
+/* .header .nav{flex-basis: 60%;}
+.header .nav ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
+.header .nav >ul > li:hover{font-weight: bold;}
+.header .nav > ul> li:hover > a {color: orange;}
+
+
+.header .nav ul li {position: relative; flex-basis: 15%; text-align: center;}
+.header .nav ul li .submenu{
+    position: absolute; width: 100%; transition: 0.3s; background-color: #eee; top: 30px; height: 0; overflow: hidden;
+}
+
+/* 메뉴 개수대로 나오게됨 */
+/* .header .nav ul li:hover .submenu {height: 90px;}
+.header .nav ul li:nth-child(3):hover .submenu {height: 122px;}
+.header .nav ul li:nth-child(4):hover .submenu {height: 152px;}
+.header .nav ul li:nth-child(5):hover .submenu {height: 62px;}
+.header .nav ul li .submenu ul{border: 1px solid #ddd;}
+.header .nav ul li .submenu ul li{flex-basis: 100%; border-bottom: 1px solid #ddd; padding: 5px 0; font-size: 14px; text-align: center;}
+.header .nav ul li .submenu ul li:last-child{border-bottom: 0;} */
+
+/* 
+.header .nav ul li:hover .submenu ul li{font-weight: normal;}
+.header .nav ul li .submenu ul li:hover{font-weight: bold;}  */
+/*bold 글자진하게*/
+/* .header .member{flex-basis: 10%;}
+.header .member ul{display: flex; justify-content: space-between; align-items: center;}
+.header .member ul li{font-size: 14px;} */ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* 메뉴 안 끝 */
+/* 메뉴끝----- */
+/* sns시작----*/
+.two-nav .sns-nav{position: relative; height: 100%;}
+.two-nav{position: absolute; right: 230px; top: 470px;  height: 224px;} /* 사이드위치 */
+.two-nav .sns-nav  li{color: #fff; border-radius: 50%;  background-color: #000; width: 48px; height: 48px;  text-align: center; margin-bottom: 10px; position: absolute;  top: 176px; transition: 0.3s 0.2s;}   
+.two-nav .sns-nav  li:nth-child(2){transition-delay: 0.3s;}
+.two-nav .sns-nav  li:nth-child(3){transition-delay: 0.4s;}
+
+.two-nav .sns-nav  li img{width: 48px; height: 48px;}
+.two-nav .sns-nav  .text a{ bottom: 8px;}
+
+/* sns  아이콘 */
+.two-nav .sns-btn{ border: 1px solid #ff9742; border-radius: 100%; text-align: center;  font-size: 14px; width: 48px; height: 48px; background-color: #fa801c; font-size: 15px; position: absolute; bottom: 0;}
+.sns-btn a{ transition: 1s; height: 0; overflow: hidden; color: #fff; line-height: 45px;}
+/* sns끝----- */
+/*현대자동차그룹의 다양한 드라이빙 프로그램전체프로그램 소개 시작  */
+.program{width: 100%;background-color: #151515; padding: 80px 0;}
+.program-wrap{  color: #fff; width: 1440px;margin: 0 auto;}
+.program .title-area{display: flex; justify-content: space-between; align-items: flex-end;}
+.program-wrap p{font-size: 32px; font-weight: bold; }
+.program-wrap .info{ display: flex; justify-content: flex-start;}
+
+.program-wrap .info a{width: 100%; color: #fff; 
+    background: linear-gradient(120deg, #ff8933, #ea2e2e, #fff, #fff);  background-size: 400%; transition: 1s; background-position: 90% 90%;
+    width: 180px; height: 40px; margin: 0 auto; display: flex; font-size: 15px; font-weight: bold; 
+    border-radius: 20px; border: 1px solid #fff; color: #000; justify-content: center; align-items:center; }
+
+.program-wrap .info:hover a{background-position: 0 0; color: #000;}   
+/*현대자동차그룹의 다양한 드라이빙 프로그램전체프로그램 소개 끝  */
+/*드라이빙 익스피리언스 시작  */
+.program-content{ background-color: #151515; color: #fff; margin: 0 auto;  display: flex; font-size: 15px; font-weight: bold;  justify-content: space-between; gap:20px; margin-top: 40px;}
+.program-content h2{padding-top: 10px; font-size: 20px;}
+.program-content p{
+ display: flex; font-size: 15px; font-weight: bold;  justify-content: space-between; gap:10px; padding-top: 15px;color: #FFFFFFcc;}
+
+ /*드라이빙 익스피리언스 끝  */
+ /*현대 N의 세계를 경험하는 특별한 방법 시작  */
+.experience{width: 100%; background-color: #f5f5f5;padding: 80px 0;}
+.experience-wrap{width: 1440px; margin: 0 auto;}
+.experience .title-area2{display: flex; justify-content: space-between; align-items: flex-end;}
+.experience .title-area2 p{font-size: 36px; font-weight: bold;}
+ 
+
+ /*현대 N의 세계를 경험하는 특별한 방법 끝  */
+ /*현대 N 페스티벌 시작  */
+.program-content2{background-color:#f5f5f5; color: #000; margin: 0 auto; display: flex; font-size: 15px; font-weight: bold;  justify-content: space-between; gap:20px; margin-top: 40px;}
+.program-content2 h2{padding-top: 10px; font-size: 20px;}
+.program-content2 p{display: flex; font-size: 15px; font-weight: bold; justify-content: space-between; gop: 10px; padding-top: 15px; color: #000000CC;}
+
+ /*현대 N 페스티벌 끝  */
+ /* 국내 최대 규모의 시작 */
+.domestic{width: 100%;background-color: #ffffff; margin-top: 80px;}
+.domestic .domestic-wrap{width: 1440px; margin: 0 auto;}
+.domestic .title-area3{display: flex;justify-content: space-between; align-items: flex-end;}
+.domestic .title-area3 p:nth-child(1){font-size: 36px; font-weight: bold;}
+.domestic .title-area3 p:nth-child(2){font-size: 36px; font-weight: bold;}
+.domestic .title-area3 p:nth-child(3){ padding-top: 20px;}
+
+.domestic-wrap .info2{ display: flex; justify-content: flex-start;}
+
+.domestic-wrap .info2 a{width: 100%; color: #000; 
+    width: 120px; height: 40px; margin: 0 auto; display: flex; font-size: 15px; font-weight: bold; 
+    border-radius: 20px; border: 1px solid #000; justify-content: center; align-items:center; }
+
+ /* 국내 최대 규모의 끝 */
+/* 8개의 다양한 체험트랙과 체험존 시작 */
+
+.program-content3{width: 100%; padding-bottom: 80px;}
+.program-content3 .program-content3-wrap{width: 1440px; margin: 0 auto; }
+.program-content3-wrap .content-item3{background-color:#f5f5f5;  margin-top: 40px;
+    display: flex; justify-content: space-between; align-items: flex-end; position: relative;}
+    /* .program-content3-wrap .content-item3 img{display: none;} */
+.program-content3-wrap .content-item3:hover{transition: 1s;}
+.program-content3-wrap .content-item33 .slide-item{ font-size: 18px;color: #0000008C;
+   flex-basis: 25%; padding-top: 24px; padding-bottom: 20px; width: 18%}
+   .program-content3-wrap .content-item33 .slick-slide{margin-right: 60px;}
+.program-content3-wrap .content-item33 .slick-slide.on{font-weight: bold; font-size: 18px; }
+
+
+   
+    /* 줄 간격띄우기 */
+.nav-slick .slick-slide {
+    width: 1.5%;
+    margin: 0 20px; 
+  }
+
+.nav-slick .slick-list {
+    margin: 5 -20px;
+  }
+
+/* 이미지 회색여백뜨는거 채워짐 */
+.slick-slide > div{font-size: 0;}
+
+.domestic .program-content3 .content-item33 .slick-slide{position: relative; }
+   /* .domestic .program-content3 .content-item33 ul li a:hover{ color: #fd4112; transition: 2s;} */
+.domestic .program-content3 .content-item33 .slick-slide a:hover::after{width: 100%;}
+.domestic .program-content3 .content-item33 .slick-slide a::after{background-color: #ea2e2e;
+content: "";
+position: absolute; width: 0px; height: 2px; 
+left: 0;bottom: 0; transition: 1s; top: 89px;}
+
+    
+.domestic .content-item33 .slick-slide a{background-color: #fff; color: #000000;}
+    
+.domestic .program-content3 .content-item33 .slick-slide.on a::after{width: 100%; }
+
+/* 8개의 다양한 체험트랙과 체험존 끝 */
+/* 공지사항/일정이벤트 시작 column-gap: 80px;  옆 간격*/
+
+.announcement{width: 100%;padding: 80px 0;background-color: #f5f5f5; }
+
+.announcement .announcement-wrap{width: 1440px; margin: 0 auto;
+    display: flex; justify-content: space-between; column-gap: 80px;}
+
+.notification{font-size: 15px;  margin-bottom: 30px; flex-basis: 48%; overflow: hidden; }
+
+/* hite-space: nowrap; overflow: hidden; text-overflow: ellipsis; 글자 ....효과*/
+.notification .title{margin-bottom: 30px; 
+    border-bottom: 1px solid #e2dddd; line-height: 35px; height: 65px;}
+.notification .title h2{font-size: 24px;}
+.notification .content{font-size: 18px; }
+.notification .content ul li{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 10px; position: relative;}
+.notification .content ul p{font-size: 13px; margin-bottom: 26px;}
+
+.notification .content ul li:hover{color: #000; transition: 0.2s;}
+.notification .content ul li::after{
+    content: "";
+    position: absolute; width: 0px; height: 1px; background-color: #000;
+    left: 0;bottom: 0; transition: 0s;}
+.notification .content ul li:hover::after{width: 100%;}
+
+
+
+.operate .title{margin-bottom: 30px;}
+.operate .content-area{display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
+.operate .content-area .content{font-size: 18px; }
+.operate .content-area .content a{margin-top: 30px;}
+.operate .content-area .content div{ width: 100%;height: 100%;overflow: hidden; font-size: 0; margin-bottom: 30px;} /* font-size: 0; 여백 지우기 */
+.operate .content-area .content img{width: 100%;
+    position: relative; }
+    
+    /* position: relative; */
+.operate .content-area .content div:hover img{ 
+    transform: scale(1.2);
+    margin: 0px auto;
+    transition: transform 0.5s;}
+.operate .content-area .content P{font-size: 13px; margin-top: 10px;}
+/* 공지사항/일정이벤트 끝 */
+/* 이용약관 개인정보 처리방침 시작 ---*/
+
+.footer{width: 100%; background-color: #000; padding-top: 40px;}
+.footer-wrap{width: 1440px; margin: 0 auto;}
+.footer-top{margin-bottom: 25px;}
+.footer-top ul{display: flex;}
+.footer-top ul li{margin-right: 29px;height: 18px;position: relative; top: -2px;}
+.footer-top ul li a{color: #ffffffcc; font-size: 16px;color: #ffffffcc;}
+
+.footer-bottom{}
+.footer-bottom span{font-size: 16px;color: #fff; }
+.footer-bottom p{font-size: 13px;color: #ffffff8c;margin-bottom: 25px;
+margin-top: 10px; }
+
+/* 왼쪽끝 */
+/* 오른쪽시작 */
+
+.logo-tab{color: #fff; display: flex;font-size: 10px;}
+.logo-tab a{ width: 50px; height: 30px; color: #FFFFFF8C; border-radius: 3px; 
+    border: 1px solid #fff; background-color: #222222; text-align: center; 
+    align-items: center;line-height: 30px;  margin-left: 80px;}
+
+.footer-wrap{display: flex; justify-content: space-between; align-items: flex-start;}
+.time{color: #fff; }
+.time span{font-size: 13px;}
+.time .times{display: flex; justify-content: flex-end; align-items: center; column-gap: 10px; margin-top: 20px;}
+.time p{font-size: 24px; display: inline-block; vertical-align: middle;  }
+.time img{display: flex; justify-content: space-between;align-items: flex-start;}
+.time .mark{display: flex; justify-content: flex-end; margin-top: 20px;}
+
+
+/* 인스타그램 시작 */
+
+.sns-link ul{height: 250px;display: flex; justify-content: flex-end; align-items: flex-end;}
+.sns-link ul li a{display: flex; justify-content: flex-end; align-items: flex;}
+.sns-link ul li img{width: 50px;height: 100px; }
+
+/* 인스타그램 끝 */
+/* 이용약관 개인정보 처리방침 끝 ---*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿시작 */
+/* @media screen and (min-width: 641px) and (max-width: 1024px){
+ .header .header-wrap slick{flex-basis: 49.1%;}
+ .nav .nav-wrap li{flex-basis: 49.1%;}
+
+} */
+/* 태블릿끝 */
+/* 모바일시작 */
+/* @media screen and (max-width: 640px){
+.header .header-wrap slick{flex-basis: 100%;}
+.nav .nav-wrap li{flex-basis: 100%;}
+} */
+
