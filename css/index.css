@@ -23,7 +23,6 @@ a{text-decoration: none; color: #fff;}
 .main-slide ul li img{width: 100%; height: 100%;}
 .main-slide .indicator{
     position: absolute;
-    
     display: flex;
     align-items: center;
     left: 0;
@@ -95,7 +94,11 @@ a{text-decoration: none; color: #fff;}
 }
 /* 메인사이드끝---- */
 /* 메뉴시작 --------*/
-.nav{position: absolute; width: 100%;top: 0; z-index: 99; position: absolute; }
+.nav{position: absolute; width: 100%;top: 0; z-index: 99; position: absolute; height: 90px;}
+.nav::after{content:"";
+ position: absolute; width: 100%; height: 100%; background-color: #000; top: -100%; left: 0%; transition: 0.2s; z-index: -1;}
+ .nav.on{height: 380px;}
+ .nav.on::after{top: 0;}
 .nav .nav-wrap{max-width: 1440px;margin: 0 auto; display: flex;}
 .nav .nav-wrap >ul{width: 55%;margin: 0 auto; padding: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 18px; 
     font-weight: bold; }
@@ -105,77 +108,63 @@ a{text-decoration: none; color: #fff;}
 .nav .nav-wrap .login > ul > a{width: 100%; margin: 18px 15px; display: flex; font-size: 14px; font-weight: bold;  justify-content: flex-start;}
 .nav .nav-wrap .login > ul > li:last-child > a{
      width: 145px; padding: 16px 0; text-align: center; margin-left: 20px; 
-     font-size: 16px; color: #fff; display: inline-block;
+     font-size: 16px; color: #000; display: inline-block;
 border-radius: 45px; background: linear-gradient(120deg, #ff8933, #ea2e2e, #fff, #fff);  background-size: 400%; transition: 1s; background-position: 90% 90%; 
 }
 .nav .nav-wrap .login > ul > li:last-child:hover a{background-position: 0 0; color: #000;}
+
 /* 예약하기 시작 */
-.tab{width: 100%;}
-.tab ul{position: relative; border: 1px solid #ffffff; border-radius: 16px; background-color: #fff;
+.tab{width: 100%; transition: 0.6s; opacity: 0; transform: translateX(100px); visibility: hidden;}
+.tab.on{opacity: 1; transform: translateX(0); visibility: visible;}
+.tab.on2{opacity: 0; transform: translateX(-100px); visibility: hidden;}
+.tab ul{position: relative; border: 1px solid #ffffff; border-radius: 16px; background-color: #fff; 
 padding: 20px 30px; font-size: 16px; top: 8px;
 font-weight: bold;
 display: inline-block;}
 .tab ul li{line-height: 2;}
 .tab ul li a{position: relative; color:#929292;}
-.tab ul li:hover a{ color: #000000; transition: 0.2s;}
+.tab ul li:hover a{ color: #000000; transition: 0.2s; }
 
 .tab ul li a::after{position: absolute;
     content: "";
     width: 0px; height: 2px; background-color: #e91515;
-    left: 0px;transition: 0.2s; bottom: 0;}
+    left: 0px;transition: 0.2s; bottom: 0; }
 .tab ul li a:hover::after{width: 100%; }
-
-
-
-
-
-
-
-
 /* 예약하기 끝 */
 /* 메뉴 안 시작 display: none; */
-.nav .submenu{flex-basis: 60%;}
+.nav .submenu{ width: 100%; }
 
-
-
-
-
-
-
-
-
-
-/* .header .nav{flex-basis: 60%;}
-.header .nav ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
-.header .nav >ul > li:hover{font-weight: bold;}
-.header .nav > ul> li:hover > a {color: orange;}
-
-
-.header .nav ul li {position: relative; flex-basis: 15%; text-align: center;}
-.header .nav ul li .submenu{
-    position: absolute; width: 100%; transition: 0.3s; background-color: #eee; top: 30px; height: 0; overflow: hidden;
+.submenu .submenu-wrap{justify-content: space-between; align-items: center; margin: 0 auto; width: 1440px;
 }
+.submenu .submenu-wrap{display: none;}
+.submenu .submenu-wrap.on{display: flex;}
+.submenu .submenu-wrap img{width: 428px; height: 170px;}
+.submenu .submenu-wrap h2{font-size: 36px; color: #fff;}
+.submenu .submenu-wrap p{color: #FFFFFF8C; }
+.submenu .submenu-wrap > div{flex-basis: 25%;}
 
-/* 메뉴 개수대로 나오게됨 */
-/* .header .nav ul li:hover .submenu {height: 90px;}
-.header .nav ul li:nth-child(3):hover .submenu {height: 122px;}
-.header .nav ul li:nth-child(4):hover .submenu {height: 152px;}
-.header .nav ul li:nth-child(5):hover .submenu {height: 62px;}
-.header .nav ul li .submenu ul{border: 1px solid #ddd;}
-.header .nav ul li .submenu ul li{flex-basis: 100%; border-bottom: 1px solid #ddd; padding: 5px 0; font-size: 14px; text-align: center;}
-.header .nav ul li .submenu ul li:last-child{border-bottom: 0;} */
+.submenu .submenu-one ul{font-size: 22px; }
+.submenu .submenu-one ul img{display: flex; justify-content: center;}
 
-/* 
-.header .nav ul li:hover .submenu ul li{font-weight: normal;}
-.header .nav ul li .submenu ul li:hover{font-weight: bold;}  */
-/*bold 글자진하게*/
-/* .header .member{flex-basis: 10%;}
-.header .member ul{display: flex; justify-content: space-between; align-items: center;}
-.header .member ul li{font-size: 14px;} */ */
+/* 1메뉴 센터끝 */
+/* 2메뉴 드라이빙 시작 */
 
 
 
+.submenu .submenu-one{color:#FFFFFF8C;}
+.submenu .submenu-one ul{font-size: 22px;}
+.submenu .submenu-one ul img{display: flex; justify-content: center;}
+.submenu-one ul li a:hover{color: #FFFFFF8C;}
 
+/* 3메뉴 드라이빙 시작 */
+
+
+
+.submenu .submenu-one ul{font-size: 22px;}
+.submenu .submenu-one ul img{display: flex; justify-content: center;}
+
+.submenu .submenu-two ul{ visibility: hidden; position: absolute;}
+.submenu .submenu-two ul.on{visibility: visible;}
 
 
 
@@ -245,10 +234,13 @@ display: inline-block;}
 
 .domestic-wrap .info2{ display: flex; justify-content: flex-start;}
 
-.domestic-wrap .info2 a{width: 100%; color: #000; 
-    width: 120px; height: 40px; margin: 0 auto; display: flex; font-size: 15px; font-weight: bold; 
-    border-radius: 20px; border: 1px solid #000; justify-content: center; align-items:center; }
-
+.domestic-wrap .info2 a{width: 100%; color: #ffffff; 
+    width: 120px; height: 40px; margin: 0 auto; display: flex; font-size: 15px; font-weight: bold;   border-radius: 20px; border: 1px solid #000; justify-content: center; align-items:center;
+    background: linear-gradient(120deg, #ff8933, #ea2e2e, #fff, #fff);
+    background-size: 400%; transition: 1s; background-position: 90% 90%; color: #000;}
+    
+    .domestic-wrap .info2:hover a{background-position: 0 0; color: #000;} 
+    
  /* 국내 최대 규모의 끝 */
 /* 8개의 다양한 체험트랙과 체험존 시작 */
 
@@ -304,10 +296,11 @@ left: 0;bottom: 0; transition: 1s; top: 89px;}
 /* hite-space: nowrap; overflow: hidden; text-overflow: ellipsis; 글자 ....효과*/
 .notification .title{margin-bottom: 30px; 
     border-bottom: 1px solid #e2dddd; line-height: 35px; height: 65px;}
-.notification .title h2{font-size: 24px;}
+.notification .title h2{font-size: 24px;color: #000;}
 .notification .content{font-size: 18px; }
 .notification .content ul li{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 10px; position: relative;}
 .notification .content ul p{font-size: 13px; margin-bottom: 26px;}
+.notification .content ul a{color: #000000CC;}
 
 .notification .content ul li:hover{color: #000; transition: 0.2s;}
 .notification .content ul li::after{
@@ -319,9 +312,10 @@ left: 0;bottom: 0; transition: 1s; top: 89px;}
 
 
 .operate .title{margin-bottom: 30px;}
+.operate .title h2{color: #000;}
 .operate .content-area{display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .operate .content-area .content{font-size: 18px; }
-.operate .content-area .content a{margin-top: 30px;}
+.operate .content-area .content a{margin-top: 30px;color: #000000CC; }
 .operate .content-area .content div{ width: 100%;height: 100%;overflow: hidden; font-size: 0; margin-bottom: 30px;} /* font-size: 0; 여백 지우기 */
 .operate .content-area .content img{width: 100%;
     position: relative; }

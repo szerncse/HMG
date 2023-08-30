@@ -1,4 +1,69 @@
 AOS.init()
+let k = 0;
+
+$(".nav .nav-wrap > ul li").mouseover(function(){
+    $(".nav").addClass("on")
+    k = $ (this).index()
+    if(k != 3 ){
+        $(".submenu .submenu-wrap").removeClass("on").eq(k).addClass("on")
+    }else{
+        $(".submenu .submenu-wrap").removeClass("on")
+$(".nav").removeClass("on")
+    }
+    if(k == 4){
+        $(".submenu .submenu-wrap").removeClass("on").eq(3).addClass("on")
+    }
+
+})
+let sub_i = 0;
+$(".submenu-wrap").mouseover(function(){
+    $(".nav").addClass("on")
+    $(".submenu-wrap").removeClass("on")
+    $(this).addClass("on")
+})
+$(".submenu-one ul").mouseover(function(){
+    sub_i = $(".submenu-one ul").index(this)
+})
+$(".submenu-one ul li").mouseover(function(){
+    let i = $(this).index();
+
+    if(k == 1){
+        $(".submenu-two ul").removeClass("on").eq(i-1).addClass("on")
+    }
+    if(k == 4){
+        $(".submenu-two ul").removeClass("on").eq(i-3).addClass("on")
+        
+    }
+})
+$(".submenu").mouseout(function(){
+    $(".submenu .submenu-wrap").removeClass("on")
+    $(".nav").removeClass("on")
+})
+// $(".nav .nav-wrap").mouseout(function(){
+//     $(".submenu .submenu-wrap").removeClass("on")
+//     $(".nav").removeClass("on")
+// })
+
+
+let clickCnt = 0;
+document.querySelectorAll(".login ul li")[2].addEventListener("click", function(){
+clickCnt++;
+
+if(clickCnt == 1){
+    document.querySelector(".tab").classList.add("on")
+}else{
+    document.querySelector(".tab").classList.replace("on","on2")
+    setTimeout(() => {
+        document.querySelector(".tab").classList.remove("on2")
+        clickCnt = 0;
+    }, 600);    
+}
+})
+
+
+
+
+
 
 
 // 화면 슬라이드
