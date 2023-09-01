@@ -94,26 +94,31 @@ a{text-decoration: none; color: #fff;}
 }
 /* 메인사이드끝---- */
 /* 메뉴시작 --------*/
+
 .nav{position: absolute; width: 100%;top: 0; z-index: 99; position: absolute; height: 90px;}
 .nav::after{content:"";
  position: absolute; width: 100%; height: 100%; background-color: #000; top: -100%; left: 0%; transition: 0.2s; z-index: -1;}
  .nav.on{height: 380px;}
  .nav.on::after{top: 0;}
-.nav .nav-wrap{max-width: 1440px;margin: 0 auto; display: flex;}
-.nav .nav-wrap >ul{width: 55%;margin: 0 auto; padding: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 18px; 
+.nav .nav-wrap{position: relative; max-width: 1440px;margin: 0 auto; display: flex;}
+.nav .nav-wrap >ul{width: 55%; padding: 30px; display: flex;  flex-wrap: wrap; font-size: 18px; 
     font-weight: bold; }
 .nav .nav-wrap > ul > li > a{color:#fff;}
-
+.nav .nav-wrap > ul > li{flex-basis: 20%; text-align: center;}
+.login{position: absolute; right: 0; top: 0;}
 .nav .login > ul{ display: flex; align-items: center;}
 .nav .nav-wrap .login > ul > a{width: 100%; margin: 18px 15px; display: flex; font-size: 14px; font-weight: bold;  justify-content: flex-start;}
-.nav .nav-wrap .login > ul > li:last-child > a{
+
+
+
+.nav .nav-wrap .reservation a{
      width: 145px; padding: 16px 0; text-align: center; margin-left: 20px; 
      font-size: 16px; color: #000; display: inline-block;
 border-radius: 45px; background: linear-gradient(120deg, #ff8933, #ea2e2e, #fff, #fff);  background-size: 400%; transition: 1s; background-position: 90% 90%; 
 }
 .nav .nav-wrap .login > ul > li:last-child:hover a{background-position: 0 0; color: #000;}
 
-/* 예약하기 시작 */
+/* 예약하기 효과 시작 */
 .tab{width: 100%; transition: 0.6s; opacity: 0; transform: translateX(100px); visibility: hidden;}
 .tab.on{opacity: 1; transform: translateX(0); visibility: visible;}
 .tab.on2{opacity: 0; transform: translateX(-100px); visibility: hidden;}

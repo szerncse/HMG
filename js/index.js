@@ -44,9 +44,10 @@ $(".submenu").mouseout(function(){
 //     $(".nav").removeClass("on")
 // })
 
+// 예약하기
 
 let clickCnt = 0;
-document.querySelectorAll(".login ul li")[2].addEventListener("click", function(){
+document.querySelectorAll(".reservation")[0].addEventListener("click", function(){
 clickCnt++;
 
 if(clickCnt == 1){
