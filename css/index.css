@@ -106,7 +106,9 @@ a{text-decoration: none; color: #fff;}
 .nav .nav-wrap > ul > li > a{color:#fff;}
 .nav .nav-wrap > ul > li{flex-basis: 20%; text-align: center;}
 .login{position: absolute; right: 0; top: 0;}
-.nav .login > ul{ display: flex; align-items: center;}
+.nav .login > ul{ display: flex; align-items: center; 
+    justify-content: space-evenly
+}
 .nav .nav-wrap .login > ul > a{width: 100%; margin: 18px 15px; display: flex; font-size: 14px; font-weight: bold;  justify-content: flex-start;}
 
 
