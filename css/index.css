@@ -101,6 +101,17 @@ a{text-decoration: none; color: #fff;}
  .nav.on{height: 380px;}
  .nav.on::after{top: 0;}
 .nav .nav-wrap{position: relative; max-width: 1440px;margin: 0 auto; display: flex;}
+.nav .nav-wrap ul li:nth-child(5){position: relative;}
+.nav .nav-wrap ul li:nth-child(5)::before{
+    content:"";
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+}
+
 .nav .nav-wrap >ul{width: 55%; padding: 30px; display: flex;  flex-wrap: wrap; font-size: 18px; 
     font-weight: bold; }
 .nav .nav-wrap > ul > li > a{color:#fff;}
@@ -144,25 +155,51 @@ display: inline-block;}
 
 .submenu .submenu-wrap{justify-content: space-between; align-items: center; margin: 0 auto; width: 1440px;
 }
-.submenu .submenu-wrap{display: none;}
+.submenu .submenu-wrap .submenu-title p{width: 250px;}
+
+.submenu .submenu-wrap{display: none; position: relative;}
 .submenu .submenu-wrap.on{display: flex;}
 .submenu .submenu-wrap img{width: 428px; height: 170px;}
 .submenu .submenu-wrap h2{font-size: 36px; color: #fff;}
-.submenu .submenu-wrap p{color: #FFFFFF8C; }
+.submenu .submenu-wrap p{color: #FFFFFF8C; font-size: 12px;}
 .submenu .submenu-wrap > div{flex-basis: 25%;}
+.submenu .submenu-wrap .submenu-title{padding-right: 48px;}
 
-
-.submenu .submenu-one{position: relative;}
-.submenu .submenu-one ul{font-size: 22px; }
+.submenu .submenu-one{position: relative; padding-right: 48px; }
+.submenu .submenu-one ul{font-size: 22px; position: relative;  }
 .submenu .submenu-one ul img{display: flex; justify-content: center;}
-
+.submenu .submenu-one ul li{position: relative;}
+.submenu .submenu-one ul li::before{
+    content:"";
+    position: absolute;
+    left: -24px;top: 0px; width: 2px; 
+    background-color: #f25130;
+    height: 0;
+}
+.submenu .submenu-one ul li:hover::before{
+    height: 22px;
+}
+.submenu ul li:hover a{color: #fff !important;}
+.submenu .submenu-one a{color: rgba(255,255,255,0.55);}
 /* 1메뉴 센터끝 */
 /* 2메뉴 드라이빙 시작 */
 
 
 
-.submenu .submenu-one{color:#FFFFFF8C;}
-.submenu .submenu-one ul{font-size: 22px;}
+.submenu .submenu-one ul li{margin-bottom: 20px; position: relative;}
+.submenu .submenu-one ul::before{
+content:"";
+position: absolute;
+width: 2px;
+height: 170px;
+background-color: #ffffff;
+top: 0;
+left: -24px;}
+ 
+
+.submenu .submenu-one ul{
+    font-size: 22px; 
+   }
 .submenu .submenu-one ul img{display: flex; justify-content: center;}
 .submenu-one ul li a:hover{color: #FFFFFF8C;}
 
@@ -170,14 +207,31 @@ display: inline-block;}
 
 
 
-.submenu .submenu-one ul{font-size: 22px;}
+.submenu .submenu-one ul{font-size: 22px; }
+
 .submenu .submenu-one ul img{display: flex; justify-content: center;}
 
-.submenu .submenu-two ul{ visibility: hidden; position: absolute;}
+.submenu .submenu-two ul::before{
+content:"";
+position: absolute;
+width: 3px;
+height: 170px;
+background-color: #ffffff;
+top: 1PX;
+left: -24px;
+}
+.submenu .submenu-two ul{
+    position: absolute;
+    top: 10PX;
+    visibility: hidden;
+    
+   
+}
 .submenu .submenu-two ul.on{visibility: visible;}
+.submenu .submenu-two ul li{margin-bottom: 20px;}
 
-
-
+.submenu .submenu-two ul li:hover a{color: #fff !important;}
+.submenu .submenu-two a{color: rgba(255,255,255,0.55);}
 
 
 
@@ -370,7 +424,7 @@ margin-top: 10px; }
 
 .logo-tab{color: #fff; display: flex;font-size: 10px;}
 .logo-tab a{ width: 50px; height: 30px; color: #FFFFFF8C; border-radius: 3px; 
-    border: 1px solid #fff; background-color: #222222; text-align: center; 
+    border: 1px solid #272727; background-color: #222222; text-align: center; 
     align-items: center;line-height: 30px;  margin-left: 80px;}
 
 .footer-wrap{display: flex; justify-content: space-between; align-items: flex-start;}
