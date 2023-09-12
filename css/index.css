@@ -2,8 +2,19 @@
 *{margin: 0; padding: 0; font-family:'s';}
 ul{list-style: none;}
 a{text-decoration: none; color: #fff;}
+
+/* .aside{position: fixed; width: 50px; height: 50px; 
+    background-color: rgb(36, 37, 37);
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer; 
+    border-radius: 5px; 
+    visibility: hidden; 
+    opacity: 0; transition: 0.5s;}
+.aside.on{visibility: visible; opacity: 1;} */
+
 /* 메인사이드시작---- */
-.main-slide{
+.main-slide{ 
     width: 100%;
     height: 740px;
     position: relative;
@@ -95,8 +106,15 @@ a{text-decoration: none; color: #fff;}
 /* 메인사이드끝---- */
 /* 메뉴시작 --------*/
 
-.nav{position: absolute; width: 100%;top: 0; z-index: 99; position: absolute; height: 90px;}
-.nav::after{content:"";
+.nav{
+/* position: absolute;  */
+width: 100%;top: 0; z-index: 99;
+ height: 90px; 
+ position: fixed;
+}
+/* position: fixed; 창틀고정*/
+
+.nav::after{content:""; 
  position: absolute; width: 100%; height: 100%; background-color: #000; top: -100%; left: 0%; transition: 0.2s; z-index: -1;}
  .nav.on{height: 380px;}
  .nav.on::after{top: 0;}

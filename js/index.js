@@ -1,6 +1,19 @@
 AOS.init()
 let k = 0;
 
+// 스크롤
+// document.querySelector(".aside").addEventListener("click", function()
+// {
+//     /*스크롤값 변경하는 코드  alert() */
+//      wondow.scrollTo({
+//         top: 0,
+//         behaior: "smooth"
+//      })       
+// }) 
+
+
+
+// 
 $(".nav .nav-wrap > ul li").mouseover(function(){
     $(".nav").addClass("on")
     k = $ (this).index()
