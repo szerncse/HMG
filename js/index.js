@@ -1,6 +1,23 @@
 AOS.init()
 let k = 0;
 
+
+
+
+// 헤드바 스크롤시 색상고정
+$(document).ready(function(){
+    $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+      if (scroll > 1) {
+        $(".nav").css("background" , "#000");
+      }
+      else{
+        $(".nav").css("background" , "");   
+      }
+    })
+  })
+
+
 // 스크롤
 // document.querySelector(".aside").addEventListener("click", function()
 // {
