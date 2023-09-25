@@ -6,7 +6,10 @@
     <title>drivingexperience</title>
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/all.css">
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
@@ -19,6 +22,11 @@
 </head>
 <body>
     <!-- <div class="aside"></div> -->
+
+    <div class="btns">
+        <div class="TopBtn"><img src="images/btn-top.svg" alt="상단버튼"></div>
+      </div>
+
 
     <div class="main-slide">
         <ul>
@@ -326,14 +334,14 @@
             </div>
             <div class="content">
                 <ul>
-                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1274">센터 개관 1주년 이벤트 포인트 발송 오류 관련 안내 <link rel="stylesheet" href=""></a></li>
-                    <p>2023.08.01</p>
-                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1271">2023 현대 N 페스티벌 Round3 참가접수 안내</a></li>
+                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1274">2023 현대 N 페스티벌 Round3 참가접수 안내<link rel="stylesheet" href=""></a></li>
                     <p>2023.07.10</p>
-                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1269">2023 현대 N 페스티벌 N타임트라이얼 Round2 참가접수 안내</a></li>
+                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1271">2023 현대 N 페스티벌 N타임트라이얼 Round2 참가접수 안내</a></li>
                     <p>2023.06.26</p>
-                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1264">2023 현대 N 페스티벌 Round2 참가접수 안내</a></li>
+                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1269">2023 현대 N 페스티벌 Round2 참가접수 안내</a></li>
                     <p>2023.06.05</p>
+                    <li><a href="https://drivingexperience.hyundai.co.kr/kr/customer-center/notice/board/view?detailsKey=1264">2023 현대 N 페스티벌 N타임트라이얼 Round1 참가접수 안내</a></li>
+                    <p>2023.05.08</p>
                 </ul>
             </div>
         </div>
@@ -344,25 +352,25 @@
             <div class="content-area">
                 <div class="content">
                     <div>
-                        <img src="images/8월-운영일정-썸네일-수정.jpg" alt="8">
+                        <img src="images/10이벤트.jpg" alt="8">
                     </div>
-                    <a href="#">2023년 HMG 드라이빙 익스피리언스 8월 운영 공지
-                    <p>2023.07.31</p></a>  
+                    <a href="#">2023년 HMG 드라이빙 익스피리언스 10월 운영 공지
+                    <p>2023.09.05</p></a>  
                 </div>
 
                 <div class="content">
                     <div>
-                        <img src="images/10이벤트-페이지-썸네일.jpg" alt="10">
+                        <img src="images/9월-운영일정-썸네일.jpg" alt="10">
                     </div>
                     <a href="#">2023년 HMG 드라이빙 익스피리언스 9월 운영 공지
                     <p>2023.07.31</p></a>
                 </div>
                 <div class="content">
                     <div>
-                        <img src="images/9월-운영일정-썸네일.jpg" alt="9"> 
+                        <img src="images/8월-운영일정-썸네일-수정.jpg" alt="9"> 
                     </div>
-                    <a href="#">HMG 드라이빙 익스피리언스 센터 개관 1주년 이벤트
-                    <p>2023.07.31</p></a>
+                    <a href="#">2023년 HMG 드라이빙 익스피리언스 8월 운영 공지
+                    <p>2023.07.28</p></a>
                 </div>    
             </div>   
         </div>
@@ -408,7 +416,26 @@
                 <div class="logo-tab">
                     <!-- <input type="text" list="date"> -->
                     <!-- <datalist Id="date"> htal 5에서 추가된 기능 4에서는 없는기능 -->
-                        <select class="logo-select" id="sel1" name="sellist">
+                        <div class="area-custom-select">
+                            <div class="custom-select" tabindex="0">
+                              <span class="custom-select-text">패밀리 사이트
+                                <i class="fa-solid fa-caret-down" style="color: #ffffff;" ></i>
+                            </span>
+                            </div>
+                            <ul class="custom-select-list" style="display:none;">
+                              <li value="selectOption1" class="custom-select-option">패밀리 사이트</li>
+                              <li value="selectOption2" class="custom-select-option">현대자동차</li>
+                              <li value="selectOption3" class="custom-select-option">기아</li>
+                              <li value="selectOption4" class="custom-select-option">제네시스</li>
+                              <li value="selectOption5" class="custom-select-option">현대자동차그룹</li>
+                              <li value="selectOption6" class="custom-select-option">N</li>
+                              <li value="selectOption7" class="custom-select-option">현대 모터스포츠</li>
+                              <li value="selectOption8" class="custom-select-option">글로벌 현대 드라이빙 익스피리언스</li>
+                              <li value="selectOption9" class="custom-select-option">운전 연수는 운전결심</li>
+                            </ul>
+                            <a href="#"><h3>이동</h3></a>
+                          </div>
+                        <!-- <select class="logo-select" id="sel1" name="sellist">
                             <option>패밀리 사이트</option>
                             <option>현대자동차</option>
                             <option>기아</option>
@@ -418,8 +445,7 @@
                             <option>현대 모터스포츠</option>
                             <option>글로벌 현대 드라이빙 익스피리언스</option>
                             <option>운전 연수는 운전결심</option>
-                        </select>
-                        <a href="#"><h3>이동</h3></a>
+                        </select> -->                     
                 </div>
             </div>
             <div class="time">

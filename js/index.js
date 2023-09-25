@@ -2,6 +2,101 @@ AOS.init()
 let k = 0;
 
 
+let selectFlag;
+$('.custom-select').on('click', function() {
+  $(this).toggleClass('selected');
+  if($(this).hasClass('selected')) {
+    $('.custom-select-list').show();
+  } else {
+    $('.custom-select-list').hide();
+  }
+})
+
+$('.custom-select').on('focusin', function() {
+  $('.custom-select-list').show();
+});
+
+$('.custom-select').on('focusout', function() {
+  if(!selectFlag) {
+    $('.custom-select-list').hide();
+  }
+  $(this).removeClass('selected');
+});
+
+$('.custom-select-option').on('mouseenter', function() {
+  selectFlag = true;
+});
+
+$('.custom-select-option').on('mouseout', function() {
+  selectFlag = false;
+});
+
+$('.custom-select-option').on('click', function() {
+  let value = $(this).attr('value');
+
+  $('.custom-select-text').text($(this).text());
+  $('.select-origin').val(value);
+  $('.custom-select-list').hide();
+
+  $('.select-origin').find('option').each(function(index, el) {
+    if($(el).attr('value') == value) {
+      $(el).attr('selected', 'selected');
+    } else {
+      $(el).removeAttr('selected');
+    }
+  });
+});
+
+
+
+// 예약하기 고정
+$(".info").on('click', function(e){
+    e.preventDefault()
+    $(this).toggleClass("stop")
+})
+
+
+$(".reservation").on('click', function(e){
+    e.preventDefault()
+    $(this).toggleClass("stop")
+})
+
+$(".sns-btn ").on('click', function(e){
+    e.preventDefault()
+    $(this).toggleClass("stop")
+})
+
+
+
+
+AOS.init({
+    once: true
+ })
+
+
+// 버튼 클릭 시 맨 위로 이동
+const $topBtn = document.querySelector(".TopBtn");
+$topBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });  
+}
+
+// 나타나게
+document.addEventListener("scroll", function(){
+    let pos =window.scrollY;
+    console.log(pos)
+        if(pos >= 250){
+         document.querySelector(".TopBtn").classList.add("on")
+        }else{
+        document.querySelector(".TopBtn").classList.remove("on")
+    }
+    if(pos > 2695){
+        document.querySelector(".TopBtn").classList.add("one")
+    }else{
+        document.querySelector(".TopBtn").classList.remove("one")
+    }
+
+})
+
 
 
 // 헤드바 스크롤시 색상고정
@@ -36,11 +131,18 @@ $(".nav .nav-wrap > ul li").mouseover(function(){
     k = $ (this).index()
     if(k != 3 ){
         $(".submenu .submenu-wrap").removeClass("on").eq(k).addClass("on")
+        setTimeout(() => {
+            $(".submenu .submenu-wrap").addClass("vv")
+        }, 300);
     }else{
-        $(".submenu .submenu-wrap").removeClass("on")
+        $(".submenu .submenu-wrap").removeClass("on vv")
+        
 $(".nav").removeClass("on")
     }
     if(k == 4){
+        setTimeout(() => {
+            $(".submenu .submenu-wrap").addClass("vv")
+        }, 300);
         $(".submenu .submenu-wrap").removeClass("on").eq(3).addClass("on")
     }
 
@@ -48,8 +150,8 @@ $(".nav").removeClass("on")
 let sub_i = 0;
 $(".submenu-wrap").mouseover(function(){
     $(".nav").addClass("on")
-    $(".submenu-wrap").removeClass("on")
-    $(this).addClass("on")
+    $(".submenu-wrap").removeClass("on vv")
+    $(this).addClass("on vv")
 })
 $(".submenu-one ul").mouseover(function(){
     sub_i = $(".submenu-one ul").index(this)
@@ -65,8 +167,11 @@ $(".submenu-one ul li").mouseover(function(){
         
     }
 })
+$(".submenu-one ul li").mouseout(function(){
+    $(".submenu-two ul").removeClass("on")
+})
 $(".submenu").mouseout(function(){
-    $(".submenu .submenu-wrap").removeClass("on")
+    $(".submenu .submenu-wrap").removeClass("on vv")
     $(".nav").removeClass("on")
 })
 // $(".nav .nav-wrap").mouseout(function(){
