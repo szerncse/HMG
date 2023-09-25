@@ -50,11 +50,15 @@ $('.custom-select-option').on('click', function() {
 
 
 // 예약하기 고정
-$(".info").on('click', function(e){
+$(".info2").on('click', function(e){
     e.preventDefault()
     $(this).toggleClass("stop")
 })
 
+$(".info").on('click', function(e){
+    e.preventDefault()
+    $(this).toggleClass("stop")
+})
 
 $(".reservation").on('click', function(e){
     e.preventDefault()

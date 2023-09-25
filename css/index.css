@@ -190,11 +190,11 @@ display: inline-block;}
 .tab ul li a:hover::after{width: 100%; }
 /* 예약하기 끝 */
 /* 메뉴 안 시작 display: none; */
-.nav .submenu{ width: 100%; margin-top: 43px; }
+.nav .submenu{ width: 100%; margin-top: 43px; height: 500px;}
 
 .submenu .submenu-wrap{ 
     justify-content: space-between; align-items: center; 
-    margin: 0 auto; max-width: 1440px;
+    margin: 0 auto; max-width: 1440px; 
 }
 /* .submenu .submenu-wrap *{opacity: 0; transition: 3s;} */
 .submenu .submenu-wrap .submenu-title p{width: 250px; } 
@@ -211,16 +211,16 @@ display: inline-block;}
 .submenu .submenu-wrap .submenu-title{padding-right: 48px;}
 
 .submenu .submenu-one{position: relative; padding-right: 48px; }
-.submenu .submenu-one ul{font-size: 22px; position: relative;}
+.submenu .submenu-one ul{font-size: 22px; position: relative; height: 200px;}
 
 @keyframes opacity {
     0%{ visibility: hidden;}
     100%{visibility: visible;}
 }
 .submenu .submenu-one ul img{display: flex; justify-content: center;}
-.submenu .submenu-one ul li{position: relative;}
+.submenu .submenu-one ul li{position: relative; }
 .submenu .submenu-one ul li::before{
-    content:"";
+    content:""; 
     position: absolute;
     left: -24px;top: 0px; width: 2px; 
     background-color: #f25130;
@@ -233,7 +233,9 @@ display: inline-block;}
 .submenu .submenu-one a{color: rgba(255,255,255,0.55);}
 /* 1메뉴 센터끝 */
 /* 2메뉴 드라이빙 시작 */
+.submenu .submenu-one ul img{display: flex; justify-content: center;}
 .submenu .submenu-one ul li{margin-bottom: 20px; position: relative;}
+.submenu .submenu-one ul{font-size: 22px; }
 .submenu .submenu-one ul::before{
 content:"";
 position: absolute;
@@ -243,20 +245,10 @@ background-color: #ffffff;
 top: 0;
 left: -24px;}
  
-
-.submenu .submenu-one ul{
-    font-size: 22px; 
-   }
-.submenu .submenu-one ul img{display: flex; justify-content: center;}
 .submenu-one ul li a:hover{color: #FFFFFF8C;}
 
+
 /* 3메뉴 드라이빙 시작 */
-
-
-
-.submenu .submenu-one ul{font-size: 22px; }
-
-.submenu .submenu-one ul img{display: flex; justify-content: center;}
 
 .submenu .submenu-two ul::before{
 content:"";
@@ -491,7 +483,7 @@ left: 0;bottom: 0; transition: 1s; top: 89px;}
     position: relative; top: -2px;}
 .footer-top ul li a{color: #ffffffcc; font-size: 16px;color: #ffffffcc;}
 
-.footer-bottom{}
+/* .footer-bottom{} */
 .footer-bottom span{font-size: 16px;color: #fff; }
 .footer-bottom p{font-size: 13px;color: #ffffff8c;margin-bottom: 25px;
 margin-top: 10px; }
