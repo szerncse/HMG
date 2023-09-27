@@ -330,9 +330,9 @@ left: -24px;
 
 .program-wrap .info a{max-width: 100%; margin: 0 auto; 
     color: #fff; width: 180px; height: 40px;
-    background: linear-gradient(120deg, #ff8933, #ea2e2e, #fff, #fff);  background-size: 400%; transition: 1s; background-position: 90% 90%;
+    background: linear-gradient(120deg, #ff8933, #ea2e2e, transparent, transparent);  background-size: 400%; transition: 1s; background-position: 90% 90%;
     display: flex; font-size: 15px; font-weight: bold; 
-    border-radius: 20px; border: 1px solid #fff; color: #000; justify-content: center; align-items:center; }
+    border-radius: 20px; border: 1px solid #fff; justify-content: center; align-items:center; }
 
 .program-wrap .info.stop a{background-position: 0 0; color: #ffffff; border: 1px solid #f04906;}   
 .program-wrap .info:hover a{background-position: 0 0; color: #ffffff; border: 1px solid #f04906;}   
