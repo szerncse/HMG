@@ -190,20 +190,18 @@ display: inline-block;}
 .tab ul li a:hover::after{width: 100%; }
 /* 예약하기 끝 */
 /* 메뉴 안 시작 display: none; */
-.nav .submenu{ width: 100%; margin-top: 43px; height: 500px;}
+.nav .submenu.on{height: 500px;}
 
+.nav .submenu{ width: 100%; margin-top: 43px; height: 0; overflow: hidden;}
 .submenu .submenu-wrap{ 
     justify-content: space-between; align-items: center; 
     margin: 0 auto; max-width: 1440px; 
 }
-/* .submenu .submenu-wrap *{opacity: 0; transition: 3s;} */
 .submenu .submenu-wrap .submenu-title p{width: 250px; } 
-
 .submenu .submenu-wrap{display: none; position: relative; visibility: hidden;}
 .submenu .submenu-wrap.on{display: flex;}
 .submenu .submenu-wrap.vv{visibility: visible;}
 
-/* .submenu .submenu-wrap.on *{opacity: 1;}  */
 .submenu .submenu-wrap img{width: 428px; height: 170px;}
 .submenu .submenu-wrap h2{font-size: 36px; color: #fff;}
 .submenu .submenu-wrap p{color: #FFFFFF8C; font-size: 12px;}
@@ -231,8 +229,6 @@ display: inline-block;}
 }
 .submenu ul li:hover a{color: #fff !important;}
 .submenu .submenu-one a{color: rgba(255,255,255,0.55);}
-/* 1메뉴 센터끝 */
-/* 2메뉴 드라이빙 시작 */
 .submenu .submenu-one ul img{display: flex; justify-content: center;}
 .submenu .submenu-one ul li{margin-bottom: 20px; position: relative;}
 .submenu .submenu-one ul{font-size: 22px; }
@@ -244,11 +240,8 @@ height: 170px;
 background-color: #ffffff;
 top: 0;
 left: -24px;}
- 
 .submenu-one ul li a:hover{color: #FFFFFF8C;}
 
-
-/* 3메뉴 드라이빙 시작 */
 
 .submenu .submenu-two ul::before{
 content:"";
@@ -268,10 +261,8 @@ left: -24px;
 }
 .submenu .submenu-two ul.on{visibility: visible; opacity: 1;}
 .submenu .submenu-two ul li{margin-bottom: 20px;}
-
 .submenu .submenu-two ul li:hover a{color: #fff !important;}
 .submenu .submenu-two a{color: rgba(255,255,255,0.55);}
-
 
 
 
@@ -586,8 +577,14 @@ margin-top: 10px; }
 
 /* 인스타그램 시작 */
 
-.sns-link ul{height: 250px;display: flex; justify-content: flex-end; align-items: flex-end;}
-.sns-link ul li a{display: flex; justify-content: flex-end; align-items: flex;}
+.sns-link ul{height: 250px;
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: flex-end;}
+.sns-link ul li a{
+    display: flex;
+     justify-content: flex-end;
+      align-items: flex;}
 .sns-link ul li img{width: 50px;height: 100px; }
 
 /* 인스타그램 끝 */

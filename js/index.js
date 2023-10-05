@@ -129,9 +129,10 @@ $(document).ready(function(){
 
 
 
-// 
+// 네비 아래로
 $(".nav .nav-wrap > ul li").mouseover(function(){
     $(".nav").addClass("on")
+    $(".submenu").addClass("on")
     k = $ (this).index()
     if(k != 3 ){
         $(".submenu .submenu-wrap").removeClass("on").eq(k).addClass("on")
@@ -148,12 +149,13 @@ $(".nav").removeClass("on")
             $(".submenu .submenu-wrap").addClass("vv")
         }, 300);
         $(".submenu .submenu-wrap").removeClass("on").eq(3).addClass("on")
+        $(".submenu").addClass("on")
     }
 
 })
 let sub_i = 0;
 $(".submenu-wrap").mouseover(function(){
-    $(".nav").addClass("on")
+    $(".nav,.submenu").addClass("on")
     $(".submenu-wrap").removeClass("on vv")
     $(this).addClass("on vv")
 })
@@ -164,27 +166,27 @@ $(".submenu-one ul li").mouseover(function(){
     let i = $(this).index();
 
     if(k == 1){
-        $(".submenu-two ul").removeClass("on").eq(i-1).addClass("on")
+        $(".submenu-two ul ,.submenu").removeClass("on").eq(i-1).addClass("on")
     }
     if(k == 4){
-        $(".submenu-two ul").removeClass("on").eq(i-3).addClass("on")
+        $(".submenu-two ul,.submenu").removeClass("on").eq(i-3).addClass("on")
         
     }
 })
 $(".submenu-one ul li").mouseout(function(){
-    $(".submenu-two ul").removeClass("on")
+    $(".submenu-two ul,.submenu ").removeClass("on")
 })
 $(".submenu").mouseout(function(){
-    $(".submenu .submenu-wrap").removeClass("on vv")
-    $(".nav").removeClass("on")
+    $(".submenu .submenu-wrap,.submenu").removeClass("on vv")
+    $(".nav,.submenu").removeClass("on")
 })
 // $(".nav .nav-wrap").mouseout(function(){
 //     $(".submenu .submenu-wrap").removeClass("on")
 //     $(".nav").removeClass("on")
 // })
 
-// 예약하기
 
+// 예약하기
 let clickCnt = 0;
 document.querySelectorAll(".reservation")[0].addEventListener("click", function(){
 clickCnt++;
