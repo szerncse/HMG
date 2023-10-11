@@ -130,10 +130,18 @@ $(document).ready(function(){
 
 
 // 네비 아래로
+let main_index = 0;
 $(".nav .nav-wrap > ul li").mouseover(function(){
     $(".nav").addClass("on")
     $(".submenu").addClass("on")
     k = $ (this).index()
+    if(k == 1){
+        setTimeout(() => {
+            $(".submenu-two ul").eq(1).addClass("on")
+            $(".submenu .submenu-wrap").eq(1).find(".submenu-one ul li").eq(1).addClass("on")
+            // $(".submenu-one ul li").eq(1).addClass("on")
+        }, 300);
+    }
     if(k != 3 ){
         $(".submenu .submenu-wrap").removeClass("on").eq(k).addClass("on")
         setTimeout(() => {
@@ -151,7 +159,7 @@ $(".nav").removeClass("on")
         $(".submenu .submenu-wrap").removeClass("on").eq(3).addClass("on")
         $(".submenu").addClass("on")
     }
-
+    main_index = k;
 })
 let sub_i = 0;
 $(".submenu-wrap").mouseover(function(){
@@ -162,16 +170,26 @@ $(".submenu-wrap").mouseover(function(){
 $(".submenu-one ul").mouseover(function(){
     sub_i = $(".submenu-one ul").index(this)
 })
+let sub_index = -1;
 $(".submenu-one ul li").mouseover(function(){
-    let i = $(this).index();
+    sub_index = $(this).index();
+    console.log(sub_index)
+    $(".submenu-two ul").eq(1).removeClass("on")
+    $(".submenu .submenu-wrap").eq(1).find(".submenu-one ul li").eq(1).removeClass("on")
+    if(main_index == 1){
 
-    if(k == 1){
-        $(".submenu-two ul ,.submenu").removeClass("on").eq(i-1).addClass("on")
+        $(".submenu-two ul ,.submenu").removeClass("on")
+        $(".submenu-two ul ,.submenu").eq(sub_index+1).addClass("on")
     }
-    if(k == 4){
-        $(".submenu-two ul,.submenu").removeClass("on").eq(i-3).addClass("on")
-        
+    
+    if(main_index == 4){
+
+        $(".submenu .submenu-wrap").eq(main_index-1).find(".submenu-two ul").removeClass("on").eq(sub_index).addClass("on")
+            // $(".submenu-two ul ,.submenu").eq(sub_index).addClass("on")
     }
+})
+$(".submenu-one").mouseover(function(){
+        $(".submenu-two ul ,.submenu").eq(sub_index+1).addClass("on")
 })
 $(".submenu-one ul li").mouseout(function(){
     $(".submenu-two ul,.submenu ").removeClass("on")
