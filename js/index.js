@@ -190,7 +190,13 @@ $(".submenu-one ul li").mouseover(function(){
     }
 })
 $(".submenu-one").mouseover(function(){
+    let i = $(".submenu-one").index(this);
+    if(i == 3){
+        $(".submenu-two ul").eq(sub_index+3).addClass("on")
+    }else{
+        
         $(".submenu-two ul ,.submenu").eq(sub_index+1).addClass("on")
+    }
 })
 $(".submenu-one ul li").mouseout(function(){
     $(".submenu-two ul,.submenu ").removeClass("on")
@@ -199,6 +205,7 @@ $(".submenu").mouseout(function(){
     $(".submenu .submenu-wrap,.submenu").removeClass("on vv")
     $(".nav,.submenu").removeClass("on")
 })
+
 // $(".nav .nav-wrap").mouseout(function(){
 //     $(".submenu .submenu-wrap").removeClass("on")
 //     $(".nav").removeClass("on")
