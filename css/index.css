@@ -343,19 +343,22 @@ left: -24px;
 .program-content .content-item img{max-width: 100%;}
 .program-content{ background-color: #151515; color: #fff; 
     margin: 0 auto;  display: flex; font-size: 15px; font-weight: bold;  justify-content: space-between; gap:20px; margin-top: 40px;}
-.program-content h2{padding-top: 10px; font-size: 20px;}
-.program-content h2 img{padding-left: 5px; font-size: 20px;}
-/* .animate__fadeInLeftBig{animation: move 1s 1; cursor: pointer;} */
+.program-content h2{ font-size: 20px;}
+.program-content h2 img{padding-left: 5px; font-size: 20px; cursor: pointer;}
 
-.fadeInLeftBig:hover{width: 20px;height: 20px; 
-    animation: ani 0.3s running;}
-.item:hover {
-    animation-play-state: paused;}
+.content-item h2 p{display: inline-block; 
+    overflow: hidden; width: 30px; height: 18px;}
+    
+.coco:hover{ transform: translateX(20px);
+     /* transition: 0.5s; */
+    animation-play-state: paused;
+}
+
 
 @keyframes ani {
-    /* 25%{color: transparent;} */
-    /* 75%{color: transparent;} */
-    100%{translate: 100%;}
+    50%{transform: translateX(-50%);}
+    75%{transform: translateX(50%);}
+    100%{translate: 0%;}
 }
 
 .program-content p{
