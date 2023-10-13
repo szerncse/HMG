@@ -203,7 +203,7 @@ $(".submenu-one ul li").mouseout(function(){
 })
 $(".submenu").mouseout(function(){
     $(".submenu .submenu-wrap,.submenu").removeClass("on vv")
-    $(".nav,.submenu").removeClass("on")
+    $(".nav,.submenu,.submenu-two ul").removeClass("on")
 })
 
 // $(".nav .nav-wrap").mouseout(function(){
