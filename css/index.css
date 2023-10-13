@@ -462,8 +462,8 @@ left: 0;bottom: 0; transition: 1s; top: 89px;}
 .notification .title h2{font-size: 24px;color: #000;}
 .notification .title h2 img{padding-left: 5px; font-size: 20px;}
 .notification .content{font-size: 18px; }
-.notification .content ul li{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 10px; position: relative;}
-.notification .content ul p{font-size: 13px; margin-bottom: 26px;}
+.notification .content ul li{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; position: relative;}
+.notification .content ul li p{font-size: 13px; margin-bottom: 26px; margin-top: 7px;}
 .notification .content ul a{color: #000000CC;}
 
 .notification .content ul li:hover{color: #000; transition: 0.2s;}
