@@ -349,27 +349,18 @@ left: -24px;
 .content-item h2 p{display: inline-block; 
     overflow: hidden; width: 30px; height: 18px;}
     
-/* .coco:hover{
-     transform: translateX(20px);
-     transition: 0.5s;
-    animation-play-state: paused;
-} */
 
-
-
-.content-item .coco:hover {
-    animation: arrowMove .5s ease forwards;
-}
+/* 화살표 작동 */
+.coco:hover img {
+    animation: arrowMove .5s ease forwards;}
 .content-item {position: relative; display: inline-block; padding: 0;}
 .coco {position: absolute; overflow: hidden; width: 20px; height: 20px;}
-.coco img {position: absolute; top: 0; right: 0; width: 20px; height: 20px; left: auto; transform: none;}
-
+.coco img {position: absolute; top: 4px; right: 0; width: 20px; height: 20px; left: auto; transform: none;}
 @keyframes arrowMove {
    0%, 100% {right: 0;}
   50% {right: -28px;}
   50.1% {right: 28px;}
 }
-
 
 
 
