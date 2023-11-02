@@ -189,6 +189,8 @@ $(".submenu-one ul li").mouseover(function(){
             // $(".submenu-two ul ,.submenu").eq(sub_index).addClass("on")
     }
 })
+
+// $(".submenu-one").mouseover,two(function(){
 $(".submenu-one").mouseover(function(){
     let i = $(".submenu-one").index(this);
     if(i == 3){
@@ -206,10 +208,15 @@ $(".submenu").mouseout(function(){
     $(".nav,.submenu,.submenu-two ul").removeClass("on")
 })
 
-// $(".nav .nav-wrap").mouseout(function(){
-//     $(".submenu .submenu-wrap").removeClass("on")
-//     $(".nav").removeClass("on")
-// })
+// 마우스가 submenu-two ul 위에 있을 때, 메뉴 유지
+$(".submenu-two ul").mouseover(function() {
+    $(this).addClass("on");
+});
+// 마우스가 submenu 밖으로 나갔을 때, 모든 메뉴 초기화
+$(".submenu").mouseleave(function() {
+    $(".nav, .submenu, .submenu-two ul, .submenu .submenu-wrap").removeClass("on vv");
+});
+
 
 
 // 예약하기
