@@ -349,17 +349,29 @@ left: -24px;
 .content-item h2 p{display: inline-block; 
     overflow: hidden; width: 30px; height: 18px;}
     
-.coco:hover{ transform: translateX(20px);
-     /* transition: 0.5s; */
+/* .coco:hover{
+     transform: translateX(20px);
+     transition: 0.5s;
     animation-play-state: paused;
+} */
+
+
+
+.content-item .coco:hover {
+    animation: arrowMove .5s ease forwards;
+}
+.content-item {position: relative; display: inline-block; padding: 0;}
+.coco {position: absolute; overflow: hidden; width: 20px; height: 20px;}
+.coco img {position: absolute; top: 0; right: 0; width: 20px; height: 20px; left: auto; transform: none;}
+
+@keyframes arrowMove {
+   0%, 100% {right: 0;}
+  50% {right: -28px;}
+  50.1% {right: 28px;}
 }
 
 
-@keyframes ani {
-    50%{transform: translateX(-50%);}
-    75%{transform: translateX(50%);}
-    100%{translate: 0%;}
-}
+
 
 .program-content p{
  display: flex; font-size: 15px; font-weight: bold;  justify-content: space-between; gap:10px; padding-top: 15px;color: #FFFFFFcc;}
@@ -590,7 +602,7 @@ margin-top: 10px; }
 
 .logo-tab{color: #fff; display: flex;font-size: 11px;}
 
-.logo-tab i{ position: absolute; left:270px; font-size: 2px; line-height: 20px;}
+.logo-tab i{ position: absolute; left:270px; font-size: 10px; line-height: 20px;}
 .logo-tab a{ position: absolute; right:2%;
     width: 55px; height: 35px; color: #FFFFFF8C; border-radius: 5px; 
     border: 1px solid #272727; background-color: #222222; text-align: center; 
