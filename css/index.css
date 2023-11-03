@@ -169,6 +169,8 @@ background-size: 400%; transition: 1s; background-position: 90% 90%;
 }
 .nav .nav-wrap .reservation.stop a{background-position: 0 0; color: #000000;}
 .nav .nav-wrap .reservation:hover a{background-position: 0 0; color: rgb(255, 255, 255);}
+.nav .nav-wrap .reservation .tab a{background-position: 0 0; color: rgb(170, 167, 167);}
+.nav .nav-wrap .tab li:hover a{background-position: 0 0; color: rgb(0, 0, 0);}
 .nav .nav-wrap .reservation:nth-child(1) a{background-position: 0 0; color: #000000; }
 .nav .nav-wrap .reservation:nth-child(2) a{background-position: 0 0; color: #000000;}
 
